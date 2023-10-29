@@ -1,0 +1,4 @@
+Ext:07, high:D0, low:A2
+
+If you get errors when writing extended fuse, try to write FF instead of 07.
+Unused bits should be "1", but my chip gives there "0" when reading - don't know why.

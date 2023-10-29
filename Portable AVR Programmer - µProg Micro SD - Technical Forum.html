@@ -1,0 +1,2237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0035)http://www.tehnari.ru/f115/t104559/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" class="ya-page_js_yes translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<!--<base href="http://www.tehnari.ru/">--><base href="."><!--[if IE]></base><![endif]-->
+	<link rel="canonical" href="http://www.tehnari.ru/f115/t104559/">
+
+<meta name="generator" content="vBulletin 6.2.5.">
+
+<meta name="keywords" content="Portable,AVR,Программатор,µProg,Micro,SD, Portable AVR Программатор - µProg Micro SD, Компьютерный форум о железе и ноутбуках">
+<meta name="description" content="В статье мы рассмотрим конструкцию и возможности программатора AVR микроконтроллеров µProg, который является простым в использовании, очень дешевым в и">
+
+
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.8.9 CSS
+* Style: 'Main'; Style ID: 6
+*/
+body
+{
+	background: #E1E1E2;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 5px 10px 10px 10px;
+	padding: 0px;
+}
+a:link, body_alink
+{
+	color: #22229C;
+}
+a:visited, body_avisited
+{
+	color: #22229C;
+}
+a:hover, a:active, body_ahover
+{
+	color: #FF4400;
+}
+.page
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.tcat
+{
+	background: #0072BC;
+	color: #FFFFFF;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #FFFF66;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #004A80;
+	color: #FFFFFF;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link, .thead_alink
+{
+	color: #FFFFFF;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #FFFFFF;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #FF4400;
+}
+.tfoot
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #000020;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #000020;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #FF4400;
+}
+.alt1, .alt1Active
+{
+	background: #F1F1F1;
+	color: #000000;
+	border-left: 1px solid #dddbdb;
+	border-top: 1px solid #dddbdb;
+}
+.alt2, .alt2Active
+{
+	background: #Ffffff;
+	color: #000000;
+	border-left: 1px solid #dddbdb;
+	border-top: 1px solid #dddbdb;
+}
+.inlinemod
+{
+	background: #c6e0ff;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #FDFDFD;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.wysiwyg a:link, .wysiwyg_alink
+{
+	color: #22229C;
+}
+.wysiwyg a:visited, .wysiwyg_avisited
+{
+	color: #22229C;
+}
+.wysiwyg a:hover, .wysiwyg a:active, .wysiwyg_ahover
+{
+	color: #FF4400;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.bginput option, .bginput optgroup
+{
+	font-size: 10pt;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	color: #000020;
+	font: 10px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #666686;
+}
+.navbar
+{
+	color: #26353F;
+	font: bold 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font: bold 12px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.fjsel
+{
+	background: #3E5C92;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #F7F7F7;
+	color: #000000;
+	padding: 10px;
+	border: 2px outset;
+}
+.panelsurround
+{
+	background: #F0F1F3;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding: 3px 6px 3px 6px;
+	white-space: nowrap;
+}
+.vbmenu_control
+{
+	background: #F7F7F7;
+	color: #4F5459;
+	font: bold 10px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding: 3px 6px 3px 6px;
+	white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #4F5459;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #4F5459;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #4F5459;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #181B16;
+	text-align: left;
+}
+.vbmenu_option
+{
+	background: #DCDCDC;
+	color: #4F5459;
+	font: 10px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+	border: 1px solid #181B16;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #4F5459;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #4F5459;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #4F5459;
+	text-decoration: none;
+}
+.vbmenu_hilite
+{
+	background: #C5C5C5;
+	color: #3D4044;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+	border: 1px solid #181B16;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #3D4044;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #3D4044;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #3D4044;
+	text-decoration: none;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 11pt; font-weight:bold; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, th.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** de-emphasized text */
+.shade, a.shade:link, a.shade:visited { color: #777777; text-decoration: none; }
+a.shade:active, a.shade:hover { color: #FF4400; text-decoration: underline; }
+.tcat .shade, .thead .shade, .tfoot .shade { color: #DDDDDD; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+
+
+.nav {
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.nav A:link {
+	color: #FFFFFF; text-decoration: none
+}
+.nav A:visited, .nav A:active {
+	color: #FFFFFF
+}
+.nav A:hover {
+	color: #FFFFFF; text-decoration: underline
+}
+.picbox {
+	border: 1px solid #D9D9D9;
+}
+.mytable { 
+padding: 5px;
+border-top: 0px solid #505050;
+border-right: 0px solid #505050;
+border-left: 0px solid #505050;
+border-bottom: 0px solid #505050;
+background-color: #F1F1F1; 
+font-family: 
+Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #3D423B;
+ text-decoration: none;}
+
+.mytablenotic { 
+padding: 3px 1px 1px 1px;
+background-color: #FDFDFD;
+font-family: 
+Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #330066;
+ text-decoration: none; text-align: center}
+
+TABLE.border {
+border-right: 1px solid #D9D9D9;
+border-left: 1px solid #D9D9D9;
+}
+
+.info {
+padding-left: 3px;
+padding-right: 0px;
+padding-top: 3px;
+padding-bottom: 3px;
+background-color: #FFFFFF;
+border-top: 1px solid #D9D9D9;
+border-right: 2px solid #D9D9D9;
+border-left: 1px solid #D9D9D9;
+border-bottom: 2px solid #D9D9D9;
+margin-bottom: 3px;
+}
+
+.smallfont2 {
+	color: #ffffff;
+	font: 10px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+
+.announce_l {
+background: #90add0;
+color: #000000;
+border-left: 1px solid #dddbdb;
+border-top: 1px solid #dddbdb;
+}
+
+.announce_r {
+background: #c6e0ff;
+color: #000000;
+border-left: 1px solid #dddbdb;
+border-top: 1px solid #dddbdb;
+}
+
+.stuck {
+background: #c6e0ff;
+color: #000000;
+border-left: 1px solid #dddbdb;
+border-top: 1px solid #dddbdb;
+}
+
+.spacer {
+padding: 7px 7px 7px 7px;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/vbulletin_important.css">
+
+
+<!-- / CSS Stylesheet 1 -->
+
+<script src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/f.txt"></script><script src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/f(1).txt"></script><script type="text/javascript" async="" charset="utf-8" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/all.js.download"></script><script src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/f(2).txt" id="google_shimpl"></script><script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/yahoo-dom-event.js.download"></script>
+<script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/connection-min.js.download"></script>
+<script type="text/javascript">
+<!--
+var SESSIONURL = "s=6f8be9cee8b763403606321b24459db2&";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+<script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/vbulletin_global.js.download"></script>
+<script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/vbulletin_menu.js.download"></script>
+
+<script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/post_thanks.js.download"></script>
+	<title>Portable AVR Programmer - µProg Micro SD - Technical Forum</title>
+	<script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/vbulletin_post_loader.js.download"></script>
+	<style type="text/css" id="vbulletin_showthread_css">
+	<!--
+	
+	#links div { white-space: nowrap; }
+	#links img { vertical-align: middle; }
+	-->
+	</style>
+<meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preconnect" href="https://yastatic.net/"><link rel="preconnect" href="https://avatars.mds.yandex.net/"><link rel="preconnect" href="https://mc.yandex.ru/"><link rel="preconnect" href="https://ads.adfox.ru/"><script charset="utf-8" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/a14fc7a3f0d513d09db9.js.download" crossorigin="anonymous" importance="high"></script><script charset="utf-8" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/c1d4e7ea878871c6a693.js.download" crossorigin="anonymous" importance="high"></script><script async="" crossorigin="anonymous" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/host.js.download"></script><meta id="https://yastatic.net/partner-code-bundles/612100/context_static.js"><script charset="utf-8" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/5cec68d4e85c9b2318b0.js.download" crossorigin="anonymous" importance="high"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/translateelement.css"><style type="text/css">#ya-site-form0,#ya-site-form0 .ya-site-form__form,#ya-site-form0 .ya-site-form__input,#ya-site-form0 .ya-site-form__input-text,#ya-site-form0 .ya-site-form__search-precise,#ya-site-form0 .ya-site-form__submit{font-size:12px!important;color:#000!important}#ya-site-form0 .ya-site-form__form-form{display:block;margin:0;padding:0}#ya-site-form0 .ya-site-form__input{margin:0;padding:0}#ya-site-form0 .ya-site-form__search-precise{margin:0}#ya-site-form0 .ya-site-form__search-precise__radio{padding:0}#ya-site-form0 .ya-site-form__gap,#ya-site-form0 .ya-site-form__gap-i,#ya-site-form0 .ya-site-form__logo-img{margin:0;padding:0}#ya-site-form0{margin:0!important;padding:0!important}#ya-site-form0 .ya-site-form__logo-wrap{width:65px;vertical-align:top;border-collapse:collapse}#ya-site-form0 .ya-site-form__logo{display:block;width:52px;margin:0;padding:0 6px 0 0;text-decoration:none}#ya-site-form0 .ya-site-form__logo-img{width:52px;height:21px;border:0!important}#ya-site-form0 .ya-site-form__search-wrap{border-collapse:collapse}#ya-site-form0 .ya-site-form__search{font-size:12px!important;width:100%}#ya-site-form0 .ya-site-form__search-input{padding:6px}#ya-site-form0 .ya-site-form__search-input-layout,#ya-site-form0 .ya-site-form__search-input-layout-l,#ya-site-form0 .ya-site-form__search-input-layout-r{font-size:12px!important;padding:0;vertical-align:middle;border:0;border-collapse:collapse}#ya-site-form0 .ya-site-form__search-input-layout,#ya-site-form0 .ya-site-form__search-input-layout-l{width:100%}#ya-site-form0 .ya-site-form__search-precise{padding:0 18px 5px 6px;text-align:left;vertical-align:top}#ya-site-form0 .ya-site-form__search-precise-i{white-space:nowrap}#ya-site-form0 .ya-site-form__search-precise__radio{width:auto;margin:0 .3em 0 0;vertical-align:middle;background:0 0}#ya-site-form0 .ya-site-form__search-precise__label{margin:0 .4em 0 0;padding:0;vertical-align:middle}#ya-site-form0 .ya-site-form__input-text{width:100%;margin:0!important;cursor:text;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background-color:#fff;border:1px solid #7f9db9;outline-style:none;-webkit-appearance:textfield}#ya-site-form0 .ya-site-form__input-text_type_hint{background-repeat:no-repeat;background-position:.2em 50%}#ya-site-form0 .ya-site-form__submit{display:block;width:auto;margin:0 0 0 5px}#ya-site-form0 .ya-site-form__arrow-wrap{overflow:hidden;width:30px;padding:0;vertical-align:middle}#ya-site-form0 .ya-site-form__arrow{position:relative}#ya-site-form0 .ya-site-form__arrow-a{position:absolute;top:50%;right:0;width:0;height:0;margin-top:-59px;border:solid transparent;border-width:59px 0 59px 30px;-moz-border-end-style:dotted}#ya-site-form0 .ya-site-form__wrap{width:100%;table-layout:fixed;border-collapse:collapse}#ya-site-form0 .ya-site-form__gap{border:0}#ya-site-form0 .ya-site-form__gap-i{width:9em}#ya-site-form0.ya-site-form_arrow_yes .ya-site-form__search-input{padding-right:0}#ya-site-form0.ya-site-form_logo_left .ya-site-form__logo{margin-top:4px;margin-left:5px}#ya-site-form0.ya-site-form_logo_top .ya-site-form__logo{display:block;margin:6px 0 0 6px}#ya-site-form0 .ya-site-form__submit_type_image{width:19px;height:15px;outline:0;cursor:pointer;border:0}#ya-site-form0 .ya-site-form__submit_type_image { background: url(https://site.yandex.net/v2.0/i/search.png) no-repeat }#ya-site-form0 .ya-site-form__input-text_type_hint { background-image:url(https://site.yandex.net/v2.0/i/yandex-hint-rb.png) }#ya-site-form0 .ya-site-form__form * { font-size: 12px !important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text { font-style: normal!important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text { font-weight: normal!important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text { color: #000000!important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text { border-color: #7f9db9!important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text:focus { border-color: #7f9db9!important }#ya-site-form0 .ya-site-form__form .ya-site-form__input-text { background-color: #ffffff!important }#ya-site-form0 .ya-site-form__search, #ya-site-form0 .ya-site-form__search td, #ya-site-form0 .yaform__precise-i { background-color: #0072BC !important }#ya-site-form0 .ya-site-form__search-precise__label { color:#000000 !important }#ya-site-form0 .ya-site-form__arrow-a { border-left-color: #0072BC }</style><link title="Поиск по tehnari.ru" rel="search" type="application/opensearchdescription+xml" href="https://yandex.ru/search/site/opensearch.xml?ShortName=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%BF%D0%BE%20tehnari.ru&amp;InputEncoding=utf-8&amp;Image=&amp;Url-results=http%3A%2F%2Fwww.tehnari.ru%2Fsearch.html%3Fsearchid%3D2284759%26web%3D0%26text%3D%7BsearchTerms%7D&amp;Url-suggest=https%3A%2F%2Fsitesearch-suggest.yandex.ru%2Fv1%2Fsuggest%3F%26site%3D2284759%26lang%3Dru%26part%3D%7BsearchTerms%7D&amp;Url-opensearchdescr=https%3A%2F%2Fyandex.ru%2Fsearch%2Fsite%2Fopensearch.xml%3FShortName%3D%25D0%259F%25D0%25BE%25D0%25B8%25D1%2581%25D0%25BA%2520%25D0%25BF%25D0%25BE%2520tehnari.ru%26InputEncoding%3Dutf-8%26Image%3D%26Url-results%3Dhttp%253A%252F%252Fwww.tehnari.ru%252Fsearch.html%253Fsearchid%253D2284759%2526web%253D0%2526text%253D%257BsearchTerms%257D%26Url-suggest%3Dhttps%253A%252F%252Fsitesearch-suggest.yandex.ru%252Fv1%252Fsuggest%253F%2526site%253D2284759%2526lang%253Dru%2526part%253D%257BsearchTerms%257D"><style type="text/css">#ya-site-form0 .ya-site-suggest{position:relative;margin:0}#ya-site-form0 .ya-site-suggest-popup{position:absolute;width:100%}#ya-site-form0 .ya-site-suggest__opera-gap{position:absolute;height:25em;border:1px solid transparent}#ya-site-form0 .ya-site-suggest-list{position:absolute;z-index:9999;overflow:hidden;min-width:25em;width:100%;margin-top:-1px;border-collapse:separate;-webkit-box-shadow:0 1px 7px #9a9a9a;-moz-box-shadow:0 1px 7px #9a9a9a;box-shadow:0 1px 7px #9a9a9a;border:1px solid #dedede;border-color:rgba(154,154,154,.4) rgba(154,154,154,.5) rgba(154,154,154,.6);box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}#ya-site-form0 .ya-site-suggest__iframe{position:absolute;z-index:-1;min-width:25em;width:100%;height:100%;background:#fff}#ya-site-form0 .ya-site-suggest-items{font-size:16px;min-width:25em;width:100%;margin:0;padding:0 1px 0 0;list-style:none}#ya-site-form0 .ya-site-suggest-items li{margin:0;padding:0;line-height:normal}#ya-site-form0 .ya-site-suggest-elem{display:block;padding:.25em .3em;cursor:pointer;background:url()}#ya-site-form0 a.ya-site-suggest-elem:link,#ya-site-form0 a.ya-site-suggest-elem:visited{text-decoration:none}html body #ya-site-form0 .ya-site-suggest-elem-link,html body #ya-site-form0 .ya-site-suggest-elem:link{color:#000!important}#ya-site-form0 .ya-site-suggest-elem:hover,html body #ya-site-form0 .ya-site-suggest-elem_state_hover{background:#fef6d7}#ya-site-form0 .ya-site-suggest-elem_nav:hover,#ya-site-form0 .ya-site-suggest-elem_translate:hover{text-decoration:none;color:#000!important}#ya-site-form0 .ya-site-suggest-elem_nav .ya-site-suggest__link{text-decoration:underline;color:#1a3dc1}#ya-site-form0 .ya-site-suggest-elem_translate .ya-site-suggest__link{text-decoration:underline;color:#000}#ya-site-form0 .ya-site-suggest-elem .ya-site-suggest__info{white-space:nowrap;color:#666}#ya-site-form0 .ya-site-suggest-elem_selected{background:#fdedaf}#ya-site-form0 .ya-site-suggest__fact{color:#555}#ya-site-form0 .ya-site-suggest__highlight{font-weight:700}</style><meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/f(3).txt" as="script"><script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/f(3).txt"></script><link rel="preload" href="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/f(4).txt" as="script"><script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/f(4).txt"></script></head>
+<body onload="">
+<!-- logo 
+<a name="top"></a>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+<tr>
+	<td align="left"><a href="http://www.tehnari.ru/"><img src="http://www.tehnari.ru/images/misc/vbulletin3_logo_white.gif" border="0" alt="Технический форум" /></a></td>
+	<td align="right" id="header_right_cell">
+		&nbsp;
+	</td>
+</tr>
+</table>
+logo -->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+
+
+
+<div class="vbmenu_popup" id="vbbloglinks_menu" style="display: none; margin-top: 3px; position: absolute; z-index: 50;" align="left">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead"><a href="http://www.tehnari.ru/members/blogs.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">diaries</font></font></a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option vbmenu_option_alink"><a href="http://www.tehnari.ru/members/recent-entries.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The last notes</font></font></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option vbmenu_option_alink"><a href="http://www.tehnari.ru/members/best-entries.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Best Recordings</font></font></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option vbmenu_option_alink"><a href="http://www.tehnari.ru/members/best.html">Лучшие дневники</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option vbmenu_option_alink"><a href="http://www.tehnari.ru/members/all.html">Список дневников</a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option vbmenu_option_alink"><a rel="nofollow" href="http://www.tehnari.ru/blog_search.php?do=search">Поиск по дневникам</a></td>
+	</tr>
+	
+	</tbody></table>
+</div>
+<br>
+
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tbody><tr>
+	<td class="alt1" width="100%">
+
+<noindex>
+</noindex><table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody><tr>
+<td align="left">
+
+<a href="http://www.tehnari.ru/"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/logot.gif" alt="Technical Forum" border="0" title="Technical Forum"></a> 
+
+</td><td>
+<!-- ок
+<a href="https://ya.ru/ rel="nofollow" "target="_blank" ><img src="http://www.tehnari.ru/images/evolga.jpg" alt="" border="0" /></a>    -->
+ 
+
+
+
+
+
+
+</td></tr></tbody></table>
+
+		
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tbody><tr valign="bottom">
+				<td><a href="http://www.tehnari.ru/f115/t104559/#" onclick="history.back(1); return false;"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/navbits_start.gif" alt="Return" border="0" title="Return"></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a href="http://www.tehnari.ru/" accesskey="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Technical forum</font></font></a></span> 
+	<span class="navbar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &gt; </font></font><a href="http://www.tehnari.ru/f30/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Electronics, DIY and technology</font></font></a></span>
+
+
+	<span class="navbar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &gt; Electronics </font></font><a href="http://www.tehnari.ru/f39/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">forum</font></font></a></span>
+
+
+	<span class="navbar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &gt; </font></font><a href="http://www.tehnari.ru/f115/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Microprocessors</font></font></a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size:10pt; padding-top:1px" colspan="3"><a href="http://www.tehnari.ru/f115/t104559/"><img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/t104559_ltr.gif" alt="Portable AVR Programmer - µProg Micro SD" border="0" title="Portable AVR Programmer - µProg Micro SD"></a> <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+	 Portable AVR Programmer - µProg Micro SD
+
+</font></font></strong></td>
+			</tr>
+			</tbody></table>
+		
+	</td>
+
+	<td class="alt2" nowrap="nowrap" style="padding:0px">
+		<!-- login form -->
+		<form action="http://www.tehnari.ru/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/vbulletin_md5.js.download"></script>
+		<table cellpadding="0" cellspacing="3" border="0">
+		<tbody><tr>
+			<td class="smallfont" style="white-space: nowrap;"><label for="navbar_username"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name</font></font></label></td>
+			<td><input type="text" class="bginput" style="font-size: 11px" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Имя" onfocus="if (this.value == &#39;Имя&#39;) this.value = &#39;&#39;;"></td>
+			<td class="smallfont" nowrap="nowrap"><label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remember?</font></font></label></td>
+		</tr>
+		<tr>
+			<td class="smallfont"><label for="navbar_password"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Password</font></font></label></td>
+			<td><input type="password" class="bginput" style="font-size: 11px" name="vb_login_password" id="navbar_password" size="10" tabindex="102"></td>
+			<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input type="submit" class="button" value="Entrance" tabindex="104" title="Enter your username and password to login, or click the &#39;Register&#39; button to register." accesskey="s"></font></font></td>
+		</tr>
+		</tbody></table>
+		<input type="hidden" name="s" value="6f8be9cee8b763403606321b24459db2">
+		<input type="hidden" name="securitytoken" value="guest">
+		<input type="hidden" name="do" value="login">
+		<input type="hidden" name="vb_login_md5password">
+		<input type="hidden" name="vb_login_md5password_utf">
+		</form>
+		<!-- / login form -->
+	</td>
+
+</tr>
+</tbody></table>
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div class="tborder" style="padding:1px; border-top-width:0px">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tbody><tr align="center">
+<td class="vbmenu_control"><a href="http://www.tehnari.ru/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">home</font></font></a></td>
+<td class="vbmenu_control"><a href="http://www.tehnari.ru/f8/t15561/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rules</font></font></a></td>
+		
+		
+			<td class="vbmenu_control"><a href="http://www.tehnari.ru/register.php" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Registration</font></font></a></td>
+		
+		<td class="vbmenu_control"><a id="vbbloglinks" href="http://www.tehnari.ru/members/blogs.html" style="cursor: pointer;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">diaries</font></font> <img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/menu_open.gif" border="0" title="" alt=""></a><script type="text/javascript">vbmenu_register("vbbloglinks");</script></td>
+		<td class="vbmenu_control"><a rel="help" href="http://www.tehnari.ru/faq.php" accesskey="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reference</font></font></a></td>
+		
+			<td class="vbmenu_control"><a id="community" href="http://www.tehnari.ru/f115/t104559/?nojs=1#community" rel="nofollow" accesskey="6" style="cursor: pointer;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Users</font></font> <img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/menu_open.gif" border="0" title="" alt=""></a> <script type="text/javascript"> vbmenu_register("community"); </script></td>
+		
+		<td class="vbmenu_control"><a href="http://www.tehnari.ru/calendar.php"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Calendar</font></font></a></td>
+		
+			
+				
+				<td class="vbmenu_control"><a href="http://www.tehnari.ru/search.php?do=getdaily" accesskey="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All new messages</font></font></a></td>
+
+
+
+				
+				<td class="vbmenu_control"><a id="navbar_search" href="http://www.tehnari.ru/search.php" accesskey="4" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Search</font></font></a> </td>
+			
+			
+		
+		
+		
+		</tr>
+	</tbody></table>
+</div>
+<!-- / nav buttons bar -->
+
+<br>
+
+
+<form action="http://www.tehnari.ru/profile.php?do=dismissnotice" method="post" id="notices">
+<input type="hidden" name="do" value="dismissnotice">
+<input type="hidden" name="securitytoken" value="guest">
+<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="">
+<input type="hidden" name="url" value="/showthread.php?t=104559">
+	<div id="vbseo_vhtml_0"><table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">	<tbody><tr>		<td class="thead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Important information</font></font></td>	</tr>	<tr>		<td class="alt1">			<div class="navbar_notice" id="navbar_notice_3">	<table class="tborder" cellspacing="0" cellpadding="4" border="0" align="center" width="100%" style="margin: 5px 0px 1px 0px; background-color: #FFFFCC;"><tbody><tr> <td align="center" width="100%" style="margin: 0px 0px 3px 0px; background-color: #FFFFCC;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">After </font></font><a href="http://www.tehnari.ru/register.php"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">registration</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , there will be no ads and all the features of the site will turn on. </font><font style="vertical-align: inherit;">Here is a detailed description of how </font></font><a href="http://www.tehnari.ru/banner/regg.html" target="_blank"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">to ask a question</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> on the forum</font></font></td>    </tr></tbody></table></div>		</td>	</tr>	</tbody></table></div>
+	<br>
+</form>
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	
+	<!-- community link menu -->
+	<div class="vbmenu_popup" id="community_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tbody><tr><td class="thead">Наше сообщество</td></tr>
+		
+		
+		
+		
+		
+			<tr><td class="vbmenu_option"><a href="http://www.tehnari.ru/members/list/">Пользователи</a></td></tr>
+		
+		
+		</tbody></table>
+	</div>
+	<!-- / community link menu -->
+	
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tbody><tr>
+			<td class="thead">Поиск по форуму</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="http://www.tehnari.ru/search.php?do=process" method="post">
+
+					<input type="hidden" name="do" value="process">
+					<input type="hidden" name="quicksearch" value="1">
+					<input type="hidden" name="childforums" value="1">
+					<input type="hidden" name="exactname" value="1">
+					<input type="hidden" name="s" value="6f8be9cee8b763403606321b24459db2">
+					<input type="hidden" name="securitytoken" value="guest">
+					<div><input type="text" class="bginput" name="query" size="25" tabindex="1001"><input type="submit" class="button" value="Вперёд" tabindex="1004"></div>
+					<div style="margin-top:6px">
+						<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked">Отобразить темы</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003">Отображать сообщения</label>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="http://www.tehnari.ru/tags/" rel="nofollow">Поиск по метке</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="http://www.tehnari.ru/search.php" accesskey="4" rel="nofollow">Расширенный поиск</a></td>
+		</tr>
+		<tr>
+	<td class="vbmenu_option"><a rel="nofollow" href="http://www.tehnari.ru/post_thanks.php?do=findallthanks">Найти все сообщения с благодарностями</a></td>
+</tr><tr>
+	<td class="thead">Поиск по дневникам</td>
+</tr>
+<tr>
+	<td class="vbmenu_option" title="nohilite">
+		<form action="http://www.tehnari.ru/blog_search.php?do=dosearch" method="post">
+			<input type="hidden" name="s" value="6f8be9cee8b763403606321b24459db2">
+			<input type="hidden" name="securitytoken" value="guest">
+			<input type="hidden" name="do" value="dosearch">
+			<input type="hidden" name="quicksearch" value="1">
+			<div><input type="text" class="bginput" name="text" size="25" tabindex="2003"><input type="submit" class="button" value="Вперёд" tabindex="2004"></div>
+		</form>
+	</td>
+</tr>
+
+<tr>
+	<td class="vbmenu_option"><a href="http://www.tehnari.ru/blogs/tags/" rel="nofollow">Поиск по метке</a></td>
+</tr>
+
+<tr>
+	<td class="vbmenu_option"><a rel="nofollow" href="http://www.tehnari.ru/blog_search.php?6f8be9cee8b763403606321b24459db2do=search">Расширенный поиск</a></td>
+</tr>
+		</tbody></table>
+	</div>
+	<!-- / header quick search form -->
+	
+	
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tbody><tr>
+			<td class="thead" nowrap="nowrap">К странице...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="http://www.tehnari.ru/" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" style="font-size:11px" size="4">
+				<input type="button" class="button" id="pagenav_ibtn" value="Вперёд">
+			</form>
+			</td>
+		</tr>
+		</tbody></table>
+	</div>
+<!-- / PAGENAV POPUP -->
+
+
+<!-- поиск по разделам -->
+ <div class="vbmenu_popup" id="forum_search_menu" style="display:none">
+  <table cellpadding="4" cellspacing="1" border="0">
+  <tbody><tr><td class="thead">Поиск новых сообщений в разделах</td></tr>  
+<tr><td class="vbmenu_option"><a rel="nofollow" href="http://www.tehnari.ru/search.php?do=getnew" accesskey="2">Все новые сообщения</a></td>
+  </tr><tr><td class="vbmenu_option"><a rel="nofollow" href="http://www.tehnari.ru/search.php?do=getnew&amp;f=3">Компьютерный форум</a></td></tr>
+  <tr><td class="vbmenu_option"><a rel="nofollow" href="http://www.tehnari.ru/search.php?do=getnew&amp;f=30">Электроника и самоделки</a></td></tr> 
+  <tr><td class="vbmenu_option"><a rel="nofollow" href="http://www.tehnari.ru/search.php?do=getnew&amp;f=6">Софт и программы</a></td></tr>
+<tr><td class="vbmenu_option"><a rel="nofollow" href="http://www.tehnari.ru/search.php?do=getnew&amp;f=7">Общетематический</a></td></tr>
+  </tbody></table>
+ </div>
+ <!-- / поиск по разделам -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:3px">
+<tbody><tr valign="bottom">
+	
+		<td class="smallfont"><a href="http://www.tehnari.ru/newreply.php?do=newreply&amp;noquote=1&amp;p=1165405" rel="nofollow"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/reply.gif" alt="Answer" border="0" title="Answer"></a></td>
+	
+	
+</tr>
+</tbody></table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tbody><tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<td class="vbmenu_control" id="threadtools" nowrap="nowrap" style="cursor: pointer;">
+		<a rel="nofollow" href="http://www.tehnari.ru/f115/t104559/?nojs=1#goto_threadtools"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Theme Options</font></font></a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script> <img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/menu_open.gif" border="0" title="" alt="">
+	</td>
+	
+	
+	
+	<td class="vbmenu_control" id="displaymodes" nowrap="nowrap" style="cursor: pointer;">
+		<a rel="nofollow" href="http://www.tehnari.ru/f115/t104559/?nojs=1#goto_displaymodes"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">View Options</font></font></a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script> <img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/menu_open.gif" border="0" title="" alt="">
+	</td>
+	
+
+	
+
+</tr>
+</tbody></table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts"><!-- post #1165405 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit1165405" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table id="post1165405" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post1165405"><img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/post_old.gif" alt="Old" border="0" title="Old"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			02.10.2015, 20:34
+			
+			</font></font><!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF; border-left: 0px" align="right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			&nbsp;
+			# </font></font><a href="http://www.tehnari.ru/1165405-post1.html" target="new" id="postcount1165405" name="1"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ( </font></font><b><a href="http://www.tehnari.ru/f115/t104559/#post1165405" title="Link to this Post"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">permalink</font></font></a></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )
+			
+		</font></font></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #FFFFFF; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_1165405">
+				
+				<span class="bigusername"><span style="color: #333333"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Le_Fleurs</font></font></span></span>
+				
+				
+			</div>
+
+			<div class="smallfont"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Banned</font></font></div>
+			
+			
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Registration: 25.11.2011</font></font></div>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address: Ukraine, Kharkov</font></font></div>
+				
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+					Posts: 1,206
+				</font></font></div>
+				 
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thank you: 27</font></font></div>
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+		
+			
+				Thanked 82 times in 10 posts
+			
+		
+	</font></font></div>
+
+				
+				<div><span id="repdisplay_1165405_61765"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reputation: </font></font><b><font color="green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18288</font></font></font></b></span></div>
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_1165405" style="border-right: 1px solid #FFFFFF">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/icon1.gif" alt="Default" border="0" title="Default">
+				<strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Portable AVR Programmer - µProg Micro SD</font></font></strong>
+			</div>
+			<hr size="1" style="color:#FFFFFF; background-color:#FFFFFF">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1165405">
+			
+<!-- rekl.hac -->
+                        <div style="float: left;">
+	<script type="text/javascript"><!--
+google_ad_client = "pub-9765791194499148";
+/* tehnari,top.300x250 */
+google_ad_slot = "3411135983";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/f(5).txt">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;margin:0;padding:0;position:relative;visibility:visible;background-color:transparent;width:300px;height:250px;" data-ad-slot="3411135983" tabindex="0" title="Advertisement" aria-label="Advertisement" data-ad-status="unfilled"><ins id="aswift_0_anchor" style="display:block;border:none;margin:0;padding:0;position:relative;visibility:visible;background-color:transparent;width:300px;height:250px;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/ads.html" data-google-container-id="a!1" data-google-query-id="CI2PyPKh6_gCFSkR5wod_c8IMw" data-load-complete="true"></iframe></ins></ins>
+</div>
+<!-- / rekl.hac -->
+			<a href="http://www.tehnari.ru/attachments/f115/242587d1443802291-p_20151001_151620.jpg" rel="Lightbox_1165405" id="attachment242587"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/P_20151001_151620.jpg" class="thumbnail" border="0" alt="p_20151001_151620.jpg" style="margin: 2px" title="p_20151001_151620.jpg"></a> <br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+In this article, we will look at the design and features of the µProg AVR microcontroller programmer, which is easy to use, very cheap to manufacture, miniature, very fast and self-contained, using an SD memory card. </font><font style="vertical-align: inherit;">This kind of programmer is useful if the target device on the microcontroller is in a hard-to-reach place and you cannot (or do not want to) connect a laptop to program or update the software of the target device. </font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Distinctive features and main characteristics of the programmer: </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+compact dimensions </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+high programming speed: </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+recording - up to 12.5 Kbps; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+reading - up to 14.5 Kbps; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+support for FAT16 and FAT32 file system; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+support for reading, writing, verifying Flash-memory and EEPROM;</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+support for reading, writing, verifying Fuse-bits and Lock-bits; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+support for reading/writing BIN, HEX and TXT files; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+the ability to set factory settings for Fuse-bits for the target microcontroller; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+organization of the user interface based on the LPH7779 graphic display with the PCD8544 controller; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+animation of work and when performing operations; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+standard programming connector - 6-pin Atmel ISP; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+the ability to update your own software from an SD memory card; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+easy to use, 4 control buttons; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+auto-selection of programming speed (up to 4 MHz); </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+operating voltage 3V, support target microcontrollers with supply voltage from 3V to 5V. </font></font><br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Supported microcontrollers</font></font></b><br>
+<u><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The tested microcontrollers are highlighted in green. </font></font></i></u><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Note that not all microcontrollers are fully supported by the programmer - for some, only Fuse and Lock bit operations are supported. </font><font style="vertical-align: inherit;">System information about supported microcontrollers is contained in the chip.db system file (stored on the SD card). </font></font><br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Микроконтроллеры с Flash-памятью 1 КБайт:</font></font></b><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+AT90s1200, ATtiny11, ATtiny12,</font></font><font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ATtiny13/A</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , ATtiny15 Микроконтроллеры</font></font><br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> с Flash-памятью 2 КБайт: </font></font></b><br>
+<font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATtiny2313/A,</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ATtiny24/A, ATtiny26, ATtiny261/A, ATtiny28, AT90s2333, ATtiny22, ATtiny25, AT90s2313 , AT90s2323, AT90s2343</font></font><br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Microcontrollers with 4K Flash memory:</font></font></b><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+ATmega48/A, ATmega48P/PA, ATtiny461/A, ATtiny43U, ATtiny4313, ATtiny44/A, ATtiny48, AT90s4433, AT90s4414, AT90s4434, </font></font><font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATtiny45 Микроконтроллеры </font></font></font><br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">с Flash-памятью 8 КБайт:</font></font></b><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+ATmega8515, ATmega8535, </font></font><font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATmega8/A, ATmega88/A, ATmega88P /PA,</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> AT90pwm1, AT90pwm2, AT90pwm2B, AT90pwm3, AT90pwm3B, AT90pwm81, AT90usb82, ATtiny84, </font></font><font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATtiny85,</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ATtiny861/A, ATtiny87, ATtiny88, AT90s8515, AT90s8535 Микроконтроллеры </font></font><br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">с Flash-памятью 16 КБайт: </font></font></b> <br>
+<font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATmega16/A,</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ATmega16U2, ATmega16U4, ATmega16M1, ATmega161, </font></font><font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATmega162,</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ATmega163, ATmega164A, ATmega164P/PA, ATmega165A/P/PA, ATmega168/A, ATmega168P/PA, ATmega169A/PA, ATtiny167, AT90pwm216, AT90pwm316, </font></font><br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AT90usb162</font></font></b><br>
+<font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATmega32/A,</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ATmega32C1, ATmega323/A, ATmega32U2, ATmega32U4, ATmega32U6, ATmega32M1, ATmega324A, ATmega324P, ATmega324PA, ATmega325, ATmega3250, ATmega325A/PA, ATmega3250A/PA, </font></font><font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATmega328, ATmega328P,</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ATmega329, ATmega3290, ATmega329A/PA, ATmega3290A/ PA, AT90can32 64K </font></font><br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Flash Microcontrollers:</font></font></b><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+ATmega64/A, ATmega64C1, ATmega64M1, ATmega649, ATmega6490, ATmega649A/P, ATmega6490A/P, ATmega640, </font></font><font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATmega644/A, ATmega644P/PA,</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ATmega645, ATmega64,ATmega6,ATmega6,ATmega6 /P, AT90usb646, AT90usb647, AT90can64 128K </font></font><br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Flash microcontrollers:</font></font></b><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+ATmega103, </font></font><font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATmega128/A,</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ATmega1280, ATmega1281, ATmega1284, ATmega1284P, AT90usb1286, AT90usb1287, AT90can128</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Microcontrollers with Flash-memory 256 KB: </font></font><br>
+<font color="Green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATmega2560</font></font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , ATmega2561 </font></font><br>
+<br>
+<b><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Schematic diagram of the programmer</font></font></i></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+4 buttons are used to navigate the menu and control the programmer (Left, Right, Up, Down). </font><font style="vertical-align: inherit;">
+The programmer is designed for battery operation, but it is possible to use a proper power supply. </font><font style="vertical-align: inherit;">
+The main power supply parameters of the programmer: </font><font style="vertical-align: inherit;">
+nominal supply voltage: 3.3 V; </font><font style="vertical-align: inherit;">
+maximum supply voltage: 3.6 V; </font><font style="vertical-align: inherit;">
+minimum supply voltage: 2.7 V; </font><font style="vertical-align: inherit;">
+current consumption during initialization: up to 100 mA*; </font><font style="vertical-align: inherit;">
+current consumption during programming: up to 10 mA*; </font><font style="vertical-align: inherit;">
+current consumption when navigating the menu: 5 mA; </font><font style="vertical-align: inherit;">
+current consumption in the off state (Power Down mode): 0.1 &#956;A.</font></font><br>
+<a href="http://www.tehnari.ru/attachments/f115/242597d1443802681-uprog2000.png" rel="Lightbox_1165405" id="attachment242597"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/uProg2000.png" class="thumbnail" border="0" alt="uprog2000.png" style="margin: 2px" title="uprog2000.png"></a><br>
+<br><font style="vertical-align: inherit;"></font><br>
+<br><font style="vertical-align: inherit;"></font><br>
+<br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br>
+<i><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+* - current consumption depends on the used SD memory card. </font></font></i><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+The programmer works only from the voltage received from the batteries, no voltage regulators are installed. </font><font style="vertical-align: inherit;">The process of programming the target microcontroller can take place when it is powered from 3 V to 5 V, while the programmer has a supply voltage of 3 V. On the one hand (from the side of the programmer), in order to protect the input line of the microcontroller of the programmer from a voltage higher than the supply voltage, the MISO input connected via a 3.3V zener diode (D1) and a resistor (R1). </font><font style="vertical-align: inherit;">From the side of the target microcontroller, which has a supply voltage of 5 V, a voltage level of 3 V is recognized by the SCK and MOSI lines as a high level (according to the technical description, VIH=0.6VCC=0.6&#215;5 V = 3 V is a guaranteed value).</font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+As you have noticed, the programmer does not have a mechanical power switch, turning it on and off is done by holding the LEFT button. </font><font style="vertical-align: inherit;">After turning off the power, the microcontroller turns off the power of the display and the SD card and goes into Deep Sleep mode, in which it consumes a current of 0.1 &#956;A (typical) from the battery. </font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+The programmer requires an SD memory card with system files and directories. </font><font style="vertical-align: inherit;">The card also contains hex and bin files for flashing the target microcontroller and txt files containing the configuration byte for programming the Fuse and Lock bits. </font><font style="vertical-align: inherit;">An important system file is the config.ini file, which contains the programmer's configuration data. </font><b><font style="vertical-align: inherit;">To turn on the programmer, you need to hold the Left</font></b></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+button</font></font><b><font style="vertical-align: inherit;"></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">The inclusion is signaled by the appearance of a splash screen on the display showing the current software version, which disappears after a while, after which we can use the programmer's control menu. </font><font style="vertical-align: inherit;">Using the </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Up</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> and </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Down buttons</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> we select menu options, using the </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Right</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> button we enter the selected menu item or confirm the execution of a particular operation, to the </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">left</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> we exit the menu item or cancel the operation. </font></font><br>
+<br>
+<b><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Programmer functions (control menu):</font></font></i></b><br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Flash (operations with Flash-memory):</font></font></b><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+recording; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+reading; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+verification; </font></font><br>
+  <br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EEPROM (operations with EEPROM):</font></font></b><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+write; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+reading; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+verification;</font></font><br>
+  <br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fusebits (operations with Fuse-bits):</font></font></b> <br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+write; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+reading; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+verification; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+setting factory values; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Manual (Setting Bits Manually) </font></font><br>
+  <br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lockbits (Lockbit Operations):</font></font></b><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+Write; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+reading; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+verification; </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+erasing the crystal; </font><b><font style="vertical-align: inherit;">
+Settings:</font></b><font style="vertical-align: inherit;"> 
+automatic verification; </font><font style="vertical-align: inherit;">
+automatic erasing; </font><font style="vertical-align: inherit;">
+show animation; </font><font style="vertical-align: inherit;">
+show the progress of the programming process; </font><font style="vertical-align: inherit;">
+file types. </font><font style="vertical-align: inherit;">
+Description of Functions </font><b><font style="vertical-align: inherit;">Write</font></b><font style="vertical-align: inherit;"> - write data to the selected memory of the target microcontroller. </font><font style="vertical-align: inherit;">You must select a file from the list. </font><font style="vertical-align: inherit;">When operating with Fuse- and Lock-bits, the configuration bytes are in a file with a txt extension.</font></font><br>
+<b>  <br><font style="vertical-align: inherit;"></font></b><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br>
+<br><font style="vertical-align: inherit;"></font><br>
+<br>
+<b><font style="vertical-align: inherit;"></font></b><font style="vertical-align: inherit;"></font><br>
+<b><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Read</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Read data from the selected memory type of the target microcontroller to a file. </font><font style="vertical-align: inherit;">The file is created automatically in the appropriate directory on the memory card. </font><font style="vertical-align: inherit;">The filename format is x.yyy, where x is the file's sequential number </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(For example: </font></font></i> <i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">m8-a2 -1.hex)</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> and yyy is the extension (bin or hex). </font><font style="vertical-align: inherit;">The file name will be displayed after saving. </font><font style="vertical-align: inherit;">The entire memory of the microcontroller is read, regardless of how much really significant data is. </font><font style="vertical-align: inherit;">In the case of reading Fuse- and Lock-bits, the data (configuration bytes) are saved to a file with the txt extension. </font></font><br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Verify (verification, check)</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - comparison of data in the memory of the target microcontroller with the data stored in the selected file. </font><font style="vertical-align: inherit;">The result of this operation is the message </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"Pass"</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(data are identical) or " </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fail at x</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> " (error at address x), where x is the address of the first byte in which a discrepancy was found in the data. </font><font style="vertical-align: inherit;">In the case of Fuse- and Lock-bits, the comparison occurs with the configuration bytes in the file with the .txt extension. </font></font><br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Default</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - Reset Fuse bits to factory defaults. </font></font><br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chip Erase</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - An internal command to erase all microcontroller memory and reset lock bits. </font></font><br>
+<br>
+<b><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Description of settings (Settings menu)</font></font></i></b><br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Auto Verify –</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Enabling this option allows you to automatically check the data after writing to the memory of the target microcontroller. </font><font style="vertical-align: inherit;">The value can be On (enabled) or Off (disabled). </font><font style="vertical-align: inherit;">This option applies only to operations with Flash and EEPROM memory of the microcontroller, Fuse- and Lock-bits are always read after a write operation. </font></font><br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Auto Erase -</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">option to apply the target microcontroller's memory erase command, always before a memory write operation. </font><font style="vertical-align: inherit;">The operation is applicable only for Flash-memory of the target microcontroller. </font><font style="vertical-align: inherit;">The exception is when we know for sure that the memory area we are going to write to has already been cleared and we have some data at the end of this memory (bootloader). </font><font style="vertical-align: inherit;">Disabling this feature will cause the data to be overwritten without an erase operation, and if the file is properly prepared, the bootloader area will not be affected. </font></font><br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Show Anims (show animation) -</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the option enables the display of animation after each operation, depending on the result of the execution. </font><font style="vertical-align: inherit;">The animation can be canceled by pressing the Left button. </font><font style="vertical-align: inherit;">It is implemented by sequential playback of BMP files from an SD memory card from the corresponding directory, so users can change animation pictures on their own. </font><font style="vertical-align: inherit;">BMP animation file format, resolution 84&#215;48 pixels, monochrome images (2 bits). </font></font><br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prog bar -</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> the progress of the programming / reading / verification process. </font><font style="vertical-align: inherit;">This feature can be turned on or off. </font></font><br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">File types (file types) -</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> allows you to select the type of file with which the programmer will work. </font><font style="vertical-align: inherit;">Applicable for operations with Flash and EEPROM memory, and, depending on the choice, only HEX or BIN files will be displayed when opening the file list.</font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+As noted earlier, the programmer requires the presence of system files on the SD memory card. </font><font style="vertical-align: inherit;">The files must be placed in the appropriate directories: </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+files for programming Flash-memory in the "flash" folder, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+EEPROM files - in the "eeprom" folder, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+configuration txt files for programming Fuse-bits - in the "fuseb" folder, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Lock-bits - in the folder "lockb". </font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+The “System” folder contains other files necessary for the programmer to work, including the microcontroller database (chip.db file), settings (config.ini file), BMP images. </font><font style="vertical-align: inherit;">An archive with the contents of the SD card with all the necessary files is available for download in the download section, which contains the SD-files folder, the contents of which must be copied to the memory card.</font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+You can also delete files from the memory card, for this you need to select the file, hold down the button to the left and press the button to the right. </font><font style="vertical-align: inherit;">The file will be deleted. </font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+The files for programming the memory of the target microcontroller are known to be generated by the compiler, there is no doubt about them, and we place them in the appropriate folder on the memory card. </font><font style="vertical-align: inherit;">We only need to create configuration txt files for programming Fuse- and Lock-bits, the values &#8203;&#8203;in these files must be in hexadecimal format. </font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+A file with Fuse bits contains sequential data: </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">low byte, high byte, extended byte in HEX</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> . </font><font style="vertical-align: inherit;">For example, the contents of the file for the Atmel </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ATtiny2313</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> microcontroller will be: </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E4DFFF</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">(this means that our MCU will be programmed with an internal oscillator with a clock frequency of 8mHz. The configuration file may contain comments and user information, but only the first three bytes are used by the programmer. </font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+The structure of the Lock-bit configuration file is similar, except that only one is used bytes from a sequence.For example, if you need to program the LB0 and LB1 bits, then the file must contain the value FC (11111100).This rule also applies to Fuse bits, if we try to program a non-existent bit (write 0 into it), it's okay happen, we will get only a verification error, because this non-existent bit will always be read as 1.</font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+When Fuse- and Lock-bits are read by the programmer, corresponding files with the same structure are created. </font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+The list of files (when working with the programmer) is displayed not in alphabetical order, but in the order they were written to the memory card. </font><font style="vertical-align: inherit;">Files are selected with the Up and Down buttons, selected with the Right button, canceled with the Left button. </font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+The programmer supports 128 MB, 512 MB, 1 GB, 2 GB cards. </font><font style="vertical-align: inherit;">File names on the SD card in DOS 8.3 format.</font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+The target microcontroller's IPC connector is a standard 6-pin Atmel ISP connector. </font><font style="vertical-align: inherit;">However, due to the fact that the programmer is battery powered, the Vcc connector pin (connector pin 5) has been reassigned to deliver an 8 MHz clock signal to the target microcontroller (in case external clocking is needed). </font><font style="vertical-align: inherit;">The signal is fed through a 10 k&#937; resistor, so there is no need to modify the standard programming cable. </font></font><br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Atmel standard ISP connector</font></font></b><br>
+<a href="http://www.tehnari.ru/attachments/f115/242581d1443801293-isp-header.jpg" rel="Lightbox_1165405" id="attachment242581"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/ISP-header.jpg" class="thumbnail" border="0" alt="isp-header.jpg" style="margin: 2px" title="isp-header.jpg"></a> <br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+The programmer has a mode of automatic detection of the programming speed via the in-circuit interface. </font><font style="vertical-align: inherit;">7 modes are supported with speeds of 4 MHz, 2 MHz, 1 MHz, 500 kHz, 250 kHz, 125 kHz and 62.500 kHz. </font><font style="vertical-align: inherit;">Theoretically, a speed equal to &#188; of the operating frequency of the target microcontroller is selected, but this is not always the case. </font><font style="vertical-align: inherit;">At each initialization of the programming mode, the programmer starts at the maximum frequency and performs a speed test, reading the signature bytes 10 times. </font><font style="vertical-align: inherit;">In the event of an error, the operation speed (SCK frequency) is reduced and the initialization operation is repeated. </font><font style="vertical-align: inherit;">If the signature bytes cannot be read at the lowest frequency, the programmer issues an error message “ </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no answer</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ”. </font></font><br>
+<br>
+<br>
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">During the initial programming of the ATmega328P programmer microcontroller</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the following Fuse bits must be set:   </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">low: A2 (low byte)</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ,   </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">high: D0 (high byte)</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , </font></font><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ext: 07 (extended byte)</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ,. </font><font style="vertical-align: inherit;">This means: operation from an internal 8 MHz oscillator without a divider by 8, the CLKO output is on, the Brown-out detector is set to 2.7 V, the Reset vector transition to the bootloader, the size of the bootloader area is 4 KB, the EESAVE bit is programmed. </font><font style="vertical-align: inherit;">
+Here is a photo of my device. </font><font style="vertical-align: inherit;">
+The photo shows that reading or writing MK is unsuccessful </font><font style="vertical-align: inherit;">
+. And here everything is already Okay. </font><font color="Blue"><b><font size="4"><a href="http://www.tehnari.ru/attachments/f115/242599d1443803604-portable-avr-programator-uprog-.rar" title="Name: Portable AVR Programator uProg .rar Views: 1041 Size: 917.2 Kb"><font style="vertical-align: inherit;">Portable AVR Programator uProg .rar</font></a></font></b></font></font><br>
+<a href="http://www.tehnari.ru/attachments/f115/242584d1443801832-fuses_uprog_v1.3.png" rel="Lightbox_1165405" id="attachment242584"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/Fuses_uProg_v1.3.png" class="thumbnail" border="0" alt="fuses_uprog_v1.3.png" style="margin: 2px" title="fuses_uprog_v1.3.png"></a><br>
+<br><font style="vertical-align: inherit;"></font><br>
+<a href="http://www.tehnari.ru/attachments/f115/242585d1443802291-p_20151001_104736.jpg" rel="Lightbox_1165405" id="attachment242585"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/P_20151001_104736.jpg" class="thumbnail" border="0" alt="p_20151001_104736.jpg" style="margin: 2px" title="p_20151001_104736.jpg"></a> <a href="http://www.tehnari.ru/attachments/f115/242586d1443802291-p_20151001_104746.jpg" rel="Lightbox_1165405" id="attachment242586"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/P_20151001_104746.jpg" class="thumbnail" border="0" alt="p_20151001_104746.jpg" style="margin: 2px" title="p_20151001_104746.jpg"></a> <a href="http://www.tehnari.ru/attachments/f115/242587d1443802291-p_20151001_151620.jpg" rel="Lightbox_1165405" id="attachment242587"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/P_20151001_151620.jpg" class="thumbnail" border="0" alt="Click image to enlarge Name: P_20151001_151620.jpg Views: 1622 Size: 117.6 Kb ID: 242587" style="margin: 2px" title="Click image to enlarge Name: P_20151001_151620.jpg Views: 1622 Size: 117.6 Kb ID: 242587"></a> <a href="http://www.tehnari.ru/attachments/f115/242588d1443802312-p_20151001_151625.jpg" rel="Lightbox_1165405" id="attachment242588"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/P_20151001_151625.jpg" class="thumbnail" border="0" alt="p_20151001_151625.jpg" style="margin: 2px" title="p_20151001_151625.jpg"></a> <a href="http://www.tehnari.ru/attachments/f115/242590d1443802312-p_20151002_124440.jpg" rel="Lightbox_1165405" id="attachment242590"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/P_20151002_124440.jpg" class="thumbnail" border="0" alt="p_20151002_124440.jpg" style="margin: 2px" title="p_20151002_124440.jpg"></a> <a href="http://www.tehnari.ru/attachments/f115/242591d1443802339-p_20151002_124815.jpg" rel="Lightbox_1165405" id="attachment242591"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/P_20151002_124815.jpg" class="thumbnail" border="0" alt="p_20151002_124815.jpg" style="margin: 2px" title="p_20151002_124815.jpg"></a> <a href="http://www.tehnari.ru/attachments/f115/242592d1443802339-p_20151002_124904.jpg" rel="Lightbox_1165405" id="attachment242592"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/P_20151002_124904.jpg" class="thumbnail" border="0" alt="p_20151002_124904.jpg" style="margin: 2px" title="p_20151002_124904.jpg"></a><br><font style="vertical-align: inherit;"></font><br>
+ <a href="http://www.tehnari.ru/attachments/f115/242593d1443802339-p_20151002_130023.jpg" rel="Lightbox_1165405" id="attachment242593"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/P_20151002_130023.jpg" class="thumbnail" border="0" alt="p_20151002_130023.jpg" style="margin: 2px" title="p_20151002_130023.jpg"></a><br><font style="vertical-align: inherit;"></font><br>
+ <a href="http://www.tehnari.ru/attachments/f115/242589d1443802312-p_20151001_151712.jpg" rel="Lightbox_1165405" id="attachment242589"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/P_20151001_151712.jpg" class="thumbnail" border="0" alt="p_20151001_151712.jpg" style="margin: 2px" title="p_20151001_151712.jpg"></a><br>
+<br>
+<font color="Blue"><b><font size="4"><a href="http://www.tehnari.ru/attachments/f115/242599d1443803604-portable-avr-programator-uprog-.rar" title="Name: Portable AVR Programator uProg .rar Views: 1041 Size: 917.2 Kb"><font style="vertical-align: inherit;"></font></a></font></b></font>
+		</div>
+		<!-- / message -->
+
+		
+		<!-- attachments -->
+			<div style="padding:6px">
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			</div>
+		<!-- / attachments -->
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #FFFFFF; border-top: 0px">
+		<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/user_offline.gif" alt="Le_Fleurs is offline" border="0" title="Le_Fleurs is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #FFFFFF; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+			<a href="http://www.tehnari.ru/newreply.php?do=newreply&amp;p=1165405" rel="nofollow"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/quote.gif" alt="Reply with quote" border="0" title="Reply with quote"></a>
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+ <div id="post_thanks_box_1165405"><div style="padding:6px 0px 0px 0px">
+	<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+		<tbody><tr valign="top">
+			<td class="alt2" width="175">
+				
+					<strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2 User(s) Say Thank You:</font></font></strong>
+				
+				
+				
+			</td>
+			<td class="alt1"><div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AlexZir (09.10.2015), XELFAER (08.10.2015)</font></font></div></td>
+		</tr>
+	</tbody></table>
+</div></div><br>
+<table class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF" colspan="2">
+			<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/post_old.gif" alt="Old" border="0" title="Old"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			02.10.2015, 20:34
+		</font></font></td>
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #FFFFFF; border-top: 0px; border-bottom: 0px">
+
+				<span class="bigusername"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Helpmaster</font></font></span>
+				
+			<div class="smallfont"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Member</font></font></div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br><a rel="nofollow" href="http://www.tehnari.ru/members/92945.html"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/Robot.jpg" 90="" alt="Helpmaster Avatar" border="0" title="Helpmaster Avatar"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Registration: 08.03.2016</font></font></div>
+				
+				
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+					Posts: 0
+				</font></font></div>
+			</div>
+	</td>
+	<td class="alt1" style="border-right: 1px solid #FFFFFF">
+		
+			<!-- icon and title -->
+			<hr size="1" style="color:#FFFFFF; background-color:#FFFFFF">
+			<!-- / icon and title --><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+		
+There were similar topics on our forum, here is a list of them
+ </font></font><br><br>
+<a href="http://www.tehnari.ru/f23/t103832/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pony Prog </font></font></a><br><a href="http://www.tehnari.ru/f239/t46404/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Problem with Portable HDD A-DATA CH94 </font></font></a><br><a href="http://www.tehnari.ru/f210/t80898/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Critical Strike Portable </font></font></a><br><a href="http://www.tehnari.ru/f68/t78703/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DVR HD Portable DVR with 2.5 TFT LCD Screen </font></font></a><br><a href="http://www.tehnari.ru/f210/t75629/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Critical Strike Portable - Contra for Android</font></font></a><br>
+<br>
+	</td>
+</tr>
+</tbody></table>
+
+ 
+<!-- post 1165405 popup menu -->
+
+<!-- / post 1165405 popup menu -->
+
+
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1165405 --><!-- post #1165407 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit1165407" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table id="post1165407" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post1165407"><img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/post_old.gif" alt="Old" border="0" title="Old"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			02.10.2015, 20:38
+			
+			</font></font><!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF; border-left: 0px" align="right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			&nbsp;
+			# </font></font><a href="http://www.tehnari.ru/1165407-post2.html" target="new" id="postcount1165407" name="2"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ( </font></font><b><a href="http://www.tehnari.ru/f115/t104559/#post1165407" title="Link to this Post"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">permalink</font></font></a></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )
+			
+		</font></font></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #FFFFFF; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_1165407">
+				
+				<span class="bigusername"><span style="color: #333333"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Le_Fleurs</font></font></span></span>
+				
+				
+			</div>
+
+			<div class="smallfont"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Banned</font></font></div>
+			
+			
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Registration: 25.11.2011</font></font></div>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address: Ukraine, Kharkov</font></font></div>
+				
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+					Posts: 1,206
+				</font></font></div>
+				 
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thank you: 27</font></font></div>
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+		
+			
+				Thanked 82 times in 10 posts
+			
+		
+	</font></font></div>
+
+				
+				<div><span id="repdisplay_1165407_61765"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reputation: </font></font><b><font color="green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18288</font></font></font></b></span></div>
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_1165407" style="border-right: 1px solid #FFFFFF">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/icon1.gif" alt="Default" border="0" title="Default">
+				
+			</div>
+			<hr size="1" style="color:#FFFFFF; background-color:#FFFFFF">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1165407">
+			
+<!-- rekl.hac -->
+                        
+<!-- / rekl.hac --><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			Phew ..... well, like everything. </font><font style="vertical-align: inherit;">Later there will be a video where I will show all the functions. </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+I hope it can come in handy for someone, but it’s so unambiguous for me, because I often solder at work and sometimes I assembled the device and there are bugs, but in order to fix the fuses or upload the firmware, you need to take it home, take it back to flash it to continue, and it will always be at hand.</font></font><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/smile.gif" border="0" alt="" title="smile" class="inlineimg">
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #FFFFFF; border-top: 0px">
+		<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/user_offline.gif" alt="Le_Fleurs is offline" border="0" title="Le_Fleurs is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #FFFFFF; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+			<a href="http://www.tehnari.ru/newreply.php?do=newreply&amp;p=1165407" rel="nofollow"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/quote.gif" alt="Reply with quote" border="0" title="Reply with quote"></a>
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 1165407 popup menu -->
+
+<!-- / post 1165407 popup menu -->
+
+
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1165407 --><!-- post #1166928 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit1166928" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table id="post1166928" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post1166928"><img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/post_old.gif" alt="Old" border="0" title="Old"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			08.10.2015, 19:44
+			
+			</font></font><!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF; border-left: 0px" align="right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			&nbsp;
+			# </font></font><a href="http://www.tehnari.ru/1166928-post3.html" target="new" id="postcount1166928" name="3"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ( </font></font><b><a href="http://www.tehnari.ru/f115/t104559/#post1166928" title="Link to this Post"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">permalink</font></font></a></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )
+			
+		</font></font></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #FFFFFF; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_1166928">
+				
+				<span class="bigusername"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">XELFAER</font></font></span>
+				
+				
+			</div>
+
+			<div class="smallfont"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Member</font></font></div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br><a rel="nofollow" href="http://www.tehnari.ru/members/67779.html"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/1.png" width="58" height="80" alt="Avatar for XELFAER" border="0" title="Avatar for XELFAER"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Registration: 22.07.2012</font></font></div>
+				
+				
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+					Posts: 392
+				</font></font></div>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Diary entries: </font></font><a href="http://www.tehnari.ru/members/u67779/blog.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></a></div> 
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thank you: 95</font></font></div>
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+		
+			
+				Thanked 0 times in 0 posts
+			
+		
+	</font></font></div>
+
+				
+				<div><span id="repdisplay_1166928_67779"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reputation: </font></font><b><font color="green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3865</font></font></font></b></span></div>
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_1166928" style="border-right: 1px solid #FFFFFF">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/icon1.gif" alt="Default" border="0" title="Default">
+				
+			</div>
+			<hr size="1" style="color:#FFFFFF; background-color:#FFFFFF">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1166928">
+			
+<!-- rekl.hac -->
+                        
+<!-- / rekl.hac --><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			Interesting implementation, I would like to see the device in action. </font><font style="vertical-align: inherit;">We are waiting for the video.
+		</font></font></div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #FFFFFF; border-top: 0px">
+		<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/user_offline.gif" alt="XELFAER is offline" border="0" title="XELFAER is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #FFFFFF; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+			<a href="http://www.tehnari.ru/newreply.php?do=newreply&amp;p=1166928" rel="nofollow"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/quote.gif" alt="Reply with quote" border="0" title="Reply with quote"></a>
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 1166928 popup menu -->
+
+<!-- / post 1166928 popup menu -->
+
+
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1166928 --><!-- post #1167107 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit1167107" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table id="post1167107" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post1167107"><img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/post_old.gif" alt="Old" border="0" title="Old"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			09.10.2015, 14:44
+			
+			</font></font><!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF; border-left: 0px" align="right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			&nbsp;
+			# </font></font><a href="http://www.tehnari.ru/1167107-post4.html" target="new" id="postcount1167107" name="4"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ( </font></font><b><a href="http://www.tehnari.ru/f115/t104559/#post1167107" title="Link to this Post"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">permalink</font></font></a></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )
+			
+		</font></font></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #FFFFFF; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_1167107">
+				
+				<span class="bigusername"><span style="color: #333333"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Le_Fleurs</font></font></span></span>
+				
+				
+			</div>
+
+			<div class="smallfont"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Banned</font></font></div>
+			
+			
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Registration: 25.11.2011</font></font></div>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address: Ukraine, Kharkov</font></font></div>
+				
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+					Posts: 1,206
+				</font></font></div>
+				 
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thank you: 27</font></font></div>
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+		
+			
+				Thanked 82 times in 10 posts
+			
+		
+	</font></font></div>
+
+				
+				<div><span id="repdisplay_1167107_61765"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reputation: </font></font><b><font color="green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18288</font></font></font></b></span></div>
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_1167107" style="border-right: 1px solid #FFFFFF">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/icon1.gif" alt="Default" border="0" title="Default">
+				
+			</div>
+			<hr size="1" style="color:#FFFFFF; background-color:#FFFFFF">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1167107">
+			
+<!-- rekl.hac -->
+                        
+<!-- / rekl.hac --><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			I successfully flashed my programmer with 10k Mk. </font><font style="vertical-align: inherit;">But the other day it was necessary to flash and want to shoot a video. </font><font style="vertical-align: inherit;">Everything was done perfectly, but I forgot about the video. </font><font style="vertical-align: inherit;">But fortunately on YouTube I found a video of an identical programmer. </font><font style="vertical-align: inherit;">Where can I see all of his work?</font></font><br>
+<iframe src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/tg67HWwBRlY.html" width="560" height="315" class="video-filter video-youtube vf-tg67HWwBRlY" frameborder="0" allowfullscreen="true"></iframe> &nbsp;
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #FFFFFF; border-top: 0px">
+		<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/user_offline.gif" alt="Le_Fleurs is offline" border="0" title="Le_Fleurs is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #FFFFFF; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+			<a href="http://www.tehnari.ru/newreply.php?do=newreply&amp;p=1167107" rel="nofollow"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/quote.gif" alt="Reply with quote" border="0" title="Reply with quote"></a>
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 1167107 popup menu -->
+
+<!-- / post 1167107 popup menu -->
+
+
+
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1167107 --><!-- post #1167410 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit1167410" style="padding:0px 0px 6px 0px">
+	
+
+
+
+<table id="post1167410" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF; border-right: 0px">
+			<!-- status icon and date -->
+			<a name="post1167410"><img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/post_old.gif" alt="Old" border="0" title="Old"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			10.10.2015, 10:09
+			
+			</font></font><!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF; border-left: 0px" align="right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			&nbsp;
+			# </font></font><a href="http://www.tehnari.ru/1167410-post5.html" target="new" id="postcount1167410" name="5"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ( </font></font><b><a href="http://www.tehnari.ru/f115/t104559/#post1167410" title="Link to this Post"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">permalink</font></font></a></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )
+			
+		</font></font></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" width="175" style="border: 1px solid #FFFFFF; border-top: 0px; border-bottom: 0px">
+
+			<div id="postmenu_1167410">
+				
+				<span class="bigusername"><span style="color: #333333"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Le_Fleurs</font></font></span></span>
+				
+				
+			</div>
+
+			<div class="smallfont"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Banned</font></font></div>
+			
+			
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Registration: 25.11.2011</font></font></div>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address: Ukraine, Kharkov</font></font></div>
+				
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+					Posts: 1,206
+				</font></font></div>
+				 
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thank you: 27</font></font></div>
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+		
+			
+				Thanked 82 times in 10 posts
+			
+		
+	</font></font></div>
+
+				
+				<div><span id="repdisplay_1167410_61765"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reputation: </font></font><b><font color="green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18288</font></font></font></b></span></div>
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_1167410" style="border-right: 1px solid #FFFFFF">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/icon1.gif" alt="Default" border="0" title="Default">
+				
+			</div>
+			<hr size="1" style="color:#FFFFFF; background-color:#FFFFFF">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1167410">
+			
+<!-- rekl.hac -->
+                        
+<!-- / rekl.hac --><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			Also, if you look in the portable direction, you can assemble the programmer and flash the MK using an android phone by connecting the programmer via OTG. </font><font style="vertical-align: inherit;">But that is another topic</font></font><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/smile.gif" border="0" alt="" title="smile" class="inlineimg">
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border: 1px solid #FFFFFF; border-top: 0px">
+		<img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/user_offline.gif" alt="Le_Fleurs is offline" border="0" title="Le_Fleurs is offline">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" align="right" style="border: 1px solid #FFFFFF; border-left: 0px; border-top: 0px">
+	
+		<!-- controls -->
+		
+		
+		
+			<a href="http://www.tehnari.ru/newreply.php?do=newreply&amp;p=1167410" rel="nofollow"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/quote.gif" alt="Reply with quote" border="0" title="Reply with quote"></a>
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+ 
+<!-- post 1167410 popup menu -->
+
+<!-- / post 1167410 popup menu -->
+
+
+
+
+<div style="padding:5px 0px 0px 0px">
+<table class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+    <td class="thead" style="font-weight:normal; border: 1px solid #FFFFFF" colspan="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">        
+Ads
+    </font></font></td>
+</tr>
+<tr valign="top">
+ <td class="alt2" width="175" style="border: 1px solid #FFFFFF; border-top: 0px; border-bottom: 0px">
+			<div id="postmenu_1080990">
+				<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yandex</font></font></p>
+			</div>
+			<div class="smallfont"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Member</font></font></div>
+			<div class="smallfont">
+				&nbsp;<br>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Registration: 31.10.2006</font></font></div>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+					Posts: 40200
+				</font></font></div>
+				<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Diary entries: 0</font></font></div> 
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thank you: 0</font></font></div>
+	<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+	Thanked 0 times in 0 posts
+	</font></font></div>
+	<div><span id="repdisplay_1080990_70098"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reputation: </font></font><b><font color="green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">55070</font></font></font></b></span></div>
+				
+				<div>    </div>
+			</div>
+	</td>
+     <td align="left" class="alt1" style="border-right: 1px solid #FFFFFF">
+
+<!-- Яндекс.Директ tehnari.ru -->
+<script type="text/javascript"><!--
+yandex_partner_id = 52974;
+yandex_site_bg_color = 'F1F1F1';
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'flat';
+yandex_direct_limit = 2;
+yandex_direct_bg_color = 'F1F1F1';
+yandex_direct_title_color = '0000CC';
+yandex_direct_url_color = '006600';
+yandex_direct_all_color = '0000CC';
+yandex_direct_text_color = '000000';
+yandex_direct_hover_color = 'CC0033';
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//--></script><script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/context.js.download"></script>
+    </td>
+</tr>
+</tbody></table>
+</div>
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1167410 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:-3px">
+<tbody><tr valign="top">
+	
+		<td class="smallfont"><a href="http://www.tehnari.ru/newreply.php?do=newreply&amp;noquote=1&amp;p=1167410" rel="nofollow"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/reply.gif" alt="Answer" border="0" title="Answer"></a></td>
+	
+	
+</tr>
+</tbody></table>
+<!-- / controls below postbits -->
+
+
+
+
+
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/vbulletin_lightbox.js.download"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+	<br>
+	<div class="smallfont" align="center">
+		<strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">« </font></font></strong>
+			<a href="http://www.tehnari.ru/f115/t104559-prev/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Previous topic</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+			|
+			</font></font><a href="http://www.tehnari.ru/f115/t104559-next/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Next topic </font></font></a>
+		<strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">»</font></font></strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+
+
+
+
+<!-- popup menu contents -->
+<br>
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="http://www.tehnari.ru/postings.php?t=104559&amp;pollid=" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">Опции темы<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/printer.gif" alt="Версия для печати" title="Версия для печати"> <a href="http://www.tehnari.ru/f115/t104559-print/" accesskey="3" rel="nofollow">Версия для печати</a></td>
+	</tr>
+	
+	
+	
+	
+	</tbody></table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">Опции просмотра<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/mode_linear.gif" alt="Линейный вид" title="Линейный вид"> <strong>Линейный вид</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/mode_hybrid.gif" alt="Комбинированный вид" title="Комбинированный вид"> <a rel="nofollow" href="http://www.tehnari.ru/f115/t104559/?mode=hybrid">Комбинированный вид</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/mode_threaded.gif" alt="Древовидный вид" title="Древовидный вид"> <a rel="nofollow" href="http://www.tehnari.ru/f115/t104559/?mode=threaded#post1165405">Древовидный вид</a></td>
+	
+	</tr>
+	</tbody></table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr valign="bottom">
+	<td width="100%" valign="top">
+		<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="210">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float:right" href="http://www.tehnari.ru/f115/t104559/#top" onclick="return toggle_collapse(&#39;forumrules&#39;)"><img id="collapseimg_forumrules" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/collapse_thead.gif" alt="" border="0"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+		Your rights in the section
+	</font></font></td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">You </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cannot</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> create new topics</font></font></div>
+		<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">You </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">can't</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> reply to threads</font></font></div>
+		<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">You </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cannot</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> attach attachments</font></font></div>
+		<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">You </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cannot</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> edit your posts</font></font></div>
+		<hr>
+		
+		<div><a rel="nofollow" href="http://www.tehnari.ru/misc.php?do=bbcode" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BB codes </font></font></a> <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">on</font></font></strong></div>
+		<div><a rel="nofollow" href="http://www.tehnari.ru/misc.php?do=showsmilies" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Smilies </font></font></a> <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">On</font></font></strong></div>
+		<div><a rel="nofollow" href="http://www.tehnari.ru/misc.php?do=bbcode#imgcode" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">[IMG]</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> code </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Off</font></font></strong></div>
+		<div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HTML Code </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Off</font></font></strong></div><div><a rel="nofollow" href="http://www.tehnari.ru/misc.php?do=linkbacks#trackbacks" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trackbacks</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> are </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">on.</font></font></strong></div>
+<div><a rel="nofollow" href="http://www.tehnari.ru/misc.php?do=linkbacks#pingbacks" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pingbacks</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> are </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">on.</font></font></strong></div>
+<div><a rel="nofollow" href="http://www.tehnari.ru/misc.php?do=linkbacks#refbacks" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Refbacks</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> are </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">off.</font></font></strong></div>
+		<hr>
+		<div><a rel="nofollow" href="http://www.tehnari.ru/misc.php?do=showrules" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Forum Rules</font></font></a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tbody><tr>
+			<td>
+			
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+<!-- /forum rules and admin links -->
+
+<br>
+
+
+
+<br><div class="ya-site-form ya-site-form_arrow_yes ya-site-form_logo_hint ya-site-form_inited_yes" id="ya-site-form0"><div class="ya-site-form__form"><table class="ya-site-form__wrap" cellpadding="0" cellspacing="0"><tbody><tr><td class="ya-site-form__search-wrap"><table class="ya-site-form__search" cellpadding="0" cellspacing="0"><tbody><tr><td class="ya-site-form__search-input"><table class="ya-site-form__search-input-layout"><tbody><tr><td class="ya-site-form__search-input-layout-l"><div class="ya-site-form__input"><input name="text" type="search" value="" class="ya-site-form__input-text ya-site-form__input-text_type_hint" autocomplete="off"><div class="ya-site-suggest"><div class="ya-site-suggest-popup" style="display: none;"><i class="ya-site-suggest__opera-gap"></i><div class="ya-site-suggest-list"><div class="ya-site-suggest__iframe"></div><ul class="ya-site-suggest-items"></ul></div></div></div></div></td><td class="ya-site-form__search-input-layout-r"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input class="ya-site-form__submit" type="button" value="Find"></font></font></td></tr></tbody></table></td></tr><tr><td class="ya-site-form__gap"><div class="ya-site-form__gap-i"></div></td></tr></tbody></table></td><td class="ya-site-form__arrow-wrap"><div class="ya-site-form__arrow"><div class="ya-site-form__arrow-a"></div></div></td></tr></tbody></table></div></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+
+
+<!-- <div align="center">
+<a href="http://www.tehnari.ru/f226/t93900/" align="center"><img src="http://www.tehnari.ru/banner/100grad.gif" border="0" align="center"></a>
+</div>    -->
+
+
+
+
+<br>
+<div class="smallfont" align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Time zone GMT +4, time: </font></font><span class="time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11:00</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></div>
+<br>
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+
+<div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/translate_24dp.png" width="20" height="20" alt="Google Translate"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><form action="http://www.tehnari.ru/" method="get">
+
+<table cellpadding="6" cellspacing="0" border="0" width="100%" class="page" align="center">
+<tbody><tr>
+	
+		<td class="tfoot">
+			<select name="styleid" onchange="switch_id(this, &#39;style&#39;)">
+				<optgroup label="Выбор стиля">
+					<option value="6" class="" selected="selected"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">--Main</font></font></option>
+<option value="14" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-- Mobile</font></font></option>
+
+				</optgroup>
+			</select>
+		</td>
+	
+	
+		<td class="tfoot">
+			<select name="langid" onchange="switch_id(this, &#39;lang&#39;)">
+				<optgroup label="Выбор языка">
+					<option value="1" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-- English (US)</font></font></option>
+<option value="2" class="" selected="selected"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-- RU - Russian</font></font></option>
+<option value="3" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-- Russian [RU]</font></font></option>
+
+				</optgroup>
+			</select>
+		</td>
+	
+	<td class="tfoot" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<a href="http://www.tehnari.ru/sendmessage.php" rel="nofollow" accesskey="9"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Feedback</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -
+				 </font></font><a href="http://www.tehnari.ru/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Computer forum on electronics and programming</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -
+				
+				
+				 </font></font><a href="http://www.tehnari.ru/sitemap/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Archive</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -
+				
+				
+				 </font></font><a href="http://www.tehnari.ru/f115/t104559/#top" onclick="self.scrollTo(0, 0); return false;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Top</font></font></a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</tbody></table>
+
+
+
+<div align="center">
+	<div class="smallfont" align="center">
+	<!-- Do not remove this copyright notice
+	vBulletin® Version 6.2.5.   --><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Powered by vBulletin® Version 6.2.5. </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Copyright ©2000 - 2014, Jelsoft Enterprises Ltd. 
+	</font></font><!-- Do not remove this copyright notice -->
+	</div>
+
+	<div class="smallfont" align="center">
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+<noindex><nofollow><div class="smallfont" align="center">
+<br>
+
+</div><br>
+<div align="center">  <!-- LiveInternet counter --> <script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t54.11;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров и"+
+" посетителей за 24 часа' "+
+"border=0 width=88 height=31><\/a>")//--></script><a href="http://www.liveinternet.ru/click" target="_blank"><img src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/hit" alt="" title="LiveInternet: shows the number of views and visitors in 24 hours" border="0" width="88" height="31"></a><!--/LiveInternet--> 
+
+ <br><a class="links"></a><div class="smallfont" align="center"><a class="links"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copyright ©2005 - 2014 </font></font></a> <a target="_blank" href="http://www.tehnari.ru/" class="links"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tehnari.ru</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> | </font></font><a href="http://www.tehnari.ru/f8/t15561/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rules</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> | 
+</font></font><a href="http://www.tehnari.ru/f8/t31134/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">About the forum</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> | 
+</font></font><a href="http://www.tehnari.ru/sendmessage.php"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">contacts</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> | 
+</font></font><a href="http://www.tehnari.ru/f8/t84281/#post853701"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">our button</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> | 
+</font></font><a href="http://www.tehnari.ru/f8/t23668/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">advertising on the forum</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> |
+</font></font><a href="http://www.casemods.ru/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Our modding site</font></font></a>
+
+
+</div>
+	
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+
+	
+	</div>
+</nofollow></noindex></div>
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var vbseo_jshtml = new Array();
+vbseo_jshtml[0] = "<table class=\"tborder\" cellpadding=\"6\" cellspacing=\"1\" border=\"0\" width=\"100%\" align=\"center\">	<tr>		<td class=\"thead\">Важная информация</td>	</tr>	<tr>		<td class=\"alt1\">			<div class=\"navbar_notice\" id=\"navbar_notice_3\">	<table class=\"tborder\" cellspacing=\"0\" cellpadding=\"4\" border=\"0\" align=\"center\" width=\"100%\" style=\"margin: 5px 0px 1px 0px; background-color: #FFFFCC;\"><tr> <td align=\"center\" width=\"100%\" style=\"margin: 0px 0px 3px 0px; background-color: #FFFFCC;\"> После <a href=\"http://www.tehnari.ru/register.php\"><strong>регистрации</strong></a> не будет рекламы и включатся все возможности сайта. Вот подробное описание, как <a href=\"http://www.tehnari.ru/banner/regg.html\" target=\"_blank\"><strong>задать вопрос</strong></a> на форуме </td>    </tr></table></div>		</td>	</tr>	</table>";
+
+for(var vi=0;vi<vbseo_jshtml.length;vi++)
+if(fetch_object("vbseo_vhtml_"+vi))fetch_object("vbseo_vhtml_"+vi).innerHTML = vbseo_jshtml[vi];
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost){ if(cpost.substring(0,4)=='post')cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else {cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('http://www.tehnari.ru/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+
+</div></form><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_1_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_1_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/ads(1).html" data-google-container-id="a!2" data-load-complete="true"></iframe></ins></ins></ins><iframe src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./Portable AVR Programmer - µProg Micro SD - Technical Forum_files/zrt_lookup.html" style="display: none;"></iframe></html>
